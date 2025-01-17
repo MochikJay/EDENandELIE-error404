@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 404 Body styling */
+body {
+    font-family: 'Georgia', serif;  /* Elegant font for a sophisticated look */
+    background: #f9f6ee; /* Soft cream background */
+    color: #333; /* Dark text for readability */
+    text-align: center; /* Center text globally */
+    padding: 20px; /* Add padding around the body to create space from edges */
+}
+
+.container {
+    max-width: 600px; /* Maximum width for the container */
+    margin: auto; /* Center the container */
+    padding: 30px; /* Padding around content */
+    border: 2px solid #D1B6A1;  /* Soft border color */
+    border-radius: 15px;  /* Rounded corners for elegance */
+    background:  #ffffff; /* Clean white background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.error-title {
+    font-size: 80px;  /* Larger title for emphasis */
+    font-weight: bold; /* Bold font for emphasis */
+    color: #c04000; /* Rich terracotta color */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.error-message {
+    font-size: 24px;  /* Slightly larger message */
+    margin-bottom: 5px; /* Space below the message */
+    color: #c04000; /* Rich terracotta color */
+}
+
+/* Part 2: Interactive Beads Section */
+.interactive-beads {
+    margin-top: auto; /* Push to the bottom of the container */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 20vh; /* Fixed height for the beads section */
+}
+
+.bangle {
+    display: grid; /* Use grid layout for beads */
+    grid-template-columns: repeat(30, 1fr); /* 30 columns */
+    gap: 1px; /* Gap between beads */
+    max-width: calc(100% - 20px); /* Ensure bangle width fits within container with padding */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the bangle */
+    padding: 10px; /* Padding around the bangle */
+    background: #fff; /* Background color for bangle area */
+    border-radius: 10px; /* Rounded corners for bangle */
+}
+
+.bangle label {
+    display: flex; /* Flexbox for label alignment */
+    justify-content: center; /* Center the label contents */
+    align-items: center; /* Center the label contents */
+    position: relative; /* Relative positioning for bead */
+}
+
+.bangle input[type="checkbox"] {
+    display: none; /* Hide checkboxes */
+}
+
+.bangle .bead {
+    width: 14px; /* Width of the bead */
+    height: 14px; /* Height of the bead */
+    background-color: #D1B6A1; /* Bead color */
+    border-radius: 30%; /* Rounded edges */
+    transition: background-color 0.2s ease; /* Smooth transition for hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effect for beads */
+.bangle .bead:hover {
+    background-color: #a27451; /* Color change on hover */
+}
+
+/* Part 3: Instruction Section */
+.instruction {
+    margin-top: auto; /* Push to the bottom */
+    font-size: 16px; /* Font size for instructions */
+    color: #aaa298; /* Warm gray for the message */
+    margin-top: 10px; /* Space above instructions */
+    text-align: center; /* Center text */
+}
+
+@media (max-width: 768px) {
+    .error-title {
+        font-size: 50px;  /* Smaller title for mobile */
+    }
+    
+    .error-message {
+        font-size: 18px;  /* Smaller message for mobile */
+    }
+
+    .container {
+        padding: 20px;  /* Less padding on mobile */
+        max-width: 300px;
+        align-items: center; /* Center items within container */
+    }
+
+    .interactive-beads h2 {
+        font-size: 20px;  /* Smaller heading for mobile */
+    }
+
+    .instruction {
+        font-size: 14px;  /* Slightly smaller text on mobile */
+    }
+
+    .bangle {
+        grid-template-rows: repeat(3, 1fr); /* Reduce columns for smaller screens */
+        padding: 5px; /* Less padding for mobile */
+        max-width: 240px;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 150px;
+    }
+
+    .interactive-beads .bangle label:nth-last-child(-n+60) {
+        display: none;
+    }
+
+}
